@@ -1,0 +1,28 @@
+<div id="modal-content-wrapper">
+  <header id="modal-header">
+    <h1 id="modal-title"></h1>
+  </header>
+  <section id="modal-body">
+    <form id="add-form">
+      <div class="group-form" id="errors">
+
+      </div>
+      <div class="group-form">
+        <p><b>Title</b></p>
+        <input class="form-input" type="text" id="title" name="title" [(ngModel)]="entry.title" maxlength="20" placeholder="eg. At NewYork " required>
+      </div>
+      <!-- <div class="group-form">
+          <p><b>Date</b></p>
+          <input class="form-input" type="date" id="story-date" min="2018-01-01" max="2099-01-31" name="story-date" placeholder="Date">
+      </div> -->
+      <div class="group-form">
+        <p><b>Story</b></p>
+        <textarea class="form-input" name="story-description" [(ngModel)]="entry.description" id="description" cols="30" rows="10" placeholder="A brief story" required></textarea>
+      </div>
+    </form>
+    <footer id="modal-footer">
+      <button mat-raised-button id="modal-action-button" (click)="closeModal()">Cancel</button>
+      <button mat-raised-button id="modal-cancel-button" (click)="save()">Done</button>
+    </footer>
+  </section>
+</div>

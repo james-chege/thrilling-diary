@@ -1,0 +1,36 @@
+<header id="" class="dashtop">
+  <h1 id="title-header">Thriller Diary</h1>
+  <nav>
+    <ul>
+      <a routerLink="/add-entry"><li><button class="btn-toHome">Add</button></li></a>
+      <a routerLink="/profile"><li><button class="btn-toSign btn-account">Account</button></li></a>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="welcome">
+    <p class="text-white">Welcome to your dashboard <span id="name" class="name"></span></p>
+    <h1 class="text-white">Here Are your Entries</h1>
+  </section>
+  <section class="section" id="marketing">
+    <div class="wrap-content">
+    </div>
+  </section>
+  <section id="entries" class="wrap-content">
+    <div id="grid-container" class="grid-header">
+      <div class="grid-item grid-header-item id">Id</div>
+      <div class="grid-item grid-header-item created">Created</div>
+      <div class="view grid-item grid-header-item title">Title</div>
+      <div class="edit grid-item grid-header-item description">Description</div>
+      <div class="edit grid-item grid-header-item description"></div>
+      <div class="edit grid-item grid-header-item description"></div>
+    </div>
+    <app-entry
+    *ngFor="let entry of entries"
+    [entry]="entry"
+    (deleteEntry)="deleteEntry($event)"
+    >
+    </app-entry>
+  </section>
+</main>

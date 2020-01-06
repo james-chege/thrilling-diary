@@ -1,0 +1,16 @@
+<div id="grid-container">
+  <div class="grid-item">{{entry.id}}</div>
+  <div class="grid-item">{{entry.date_created}}</div>
+  <div class="view grid-item">
+  <li><a>{{entry.title}}</a></li>
+  </div>
+  <div class="edit grid-item">
+  <li><a> {{entry.description}}</a></li>
+  </div>
+  <div class="edit grid-item edit">
+    <button mat-icon-button id="logout-button" (click)="openModal(entry)">edit</button>
+  </div>
+  <div class="edit grid-item delete">
+    <li><a [routerLink]="" (click)="onDelete(entry)">  delete</a></li>
+  </div>
+</div>

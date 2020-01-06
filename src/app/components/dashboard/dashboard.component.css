@@ -1,0 +1,29 @@
+#entries {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.grid-header-item {
+  font-size: 1.2em;
+}
+
+.grid-header-item.id {
+  color: #1ABC9C;
+}
+
+.grid-header-item.title {
+  color: #0dbc87;
+}
+
+.grid-header-item.created {
+  color: #1e90bc;
+}
+
+.grid-header-item.description {
+  color: #9cbc51;
+}
+
+.grid-header-item.description {
+  color: #bc0d43;
+}

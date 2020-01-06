@@ -1,0 +1,21 @@
+<app-header></app-header>
+<main>
+  <section class="sign wrap-content">
+    <form id="signin-form" (ngSubmit)="onSubmit()">
+      <div id="return" class="group-form">
+
+      </div>
+      <div class="group-form">
+        <input type="email" id="email" class="form-input" [(ngModel)]="user.email" placeholder="Email" required name="email">
+      </div>
+      <div class="group-form">
+        <input type="password" id="password" class="form-input" [(ngModel)]="user.password" placeholder="Passowrd" required name="password">
+      </div>
+      <div class="group-form">
+        <button type="submit" class="btn-reg">Sign In</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<app-footer></app-footer>
